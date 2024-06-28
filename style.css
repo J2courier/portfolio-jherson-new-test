@@ -12,6 +12,12 @@ body {
     background-color: rgba(0, 0, 0, 0.938);
     background: linear-gradient(to bottom, rgb(59, 4, 160) 10%, rgb(84, 31, 113) 50%, rgb(2, 2, 46) 90%);
 }
+.cloud{
+    position: absolute;
+    width: 570px;
+    height: 570px;
+    display: flex;
+}
 .profile-section{
     width: 1200px;
     height: 700px;
@@ -68,8 +74,8 @@ body {
 .profile-section .box-1 {
     position: relative;
     display: flex;
-    bottom: 20em;
-    right: 28em;
+    top: 15px;
+    left: 35px;
     width: 220px;
     height: 40px;
     box-shadow: 0px 0px 2px 1px  rgba(27, 27, 168, 0.532);
@@ -84,7 +90,7 @@ body {
 .profile-text{
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 18px;
     position: relative;
     width: 200px;
     height: 40px;
@@ -95,8 +101,8 @@ body {
     position: absolute;
     box-shadow: 0px 0px 5px 2px rgb(154, 151, 250);
     border-radius: 50%;
-    right: 60em;
-    bottom: 27em;
+    right: 960px;
+    bottom: 430px;
     width: 200px;
     height: 200px;
 } 
@@ -112,9 +118,9 @@ body {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-    font-size: 4rem;
-    bottom: 8em;
-    right: 2.3em;
+    font-size: 65px;
+    bottom: 505px;
+    right: 150px;
 }
 .jherson-info1{
     position: absolute;
@@ -127,11 +133,39 @@ body {
 .about-box{
     position: absolute;;
     border-radius: 15px;
-    top: 19em;
-    left: 35.5em;
-    width: 38em;
-    height: 20em;
+    top: 310px;
+    left: 650px;
+    width: 600px;
+    height: 100px;
     color: white;
+}
+.about-paragraph{
+    background-color: rgba(12, 62, 71, 0.463);
+    box-shadow: 4px 2px 2px 2px rgb(24, 7, 155);
+    width: 500px;
+    height: 120px;
+    padding: 15px 25px;
+    font-size: 14px;
+    margin: 5px;
+
+}
+.about-paragraph2{
+    background-color: rgba(12, 62, 71, 0.463);
+    box-shadow: 4px 2px 2px 2px rgb(29, 13, 153);
+    width: 500px;
+    height: 100px;
+    padding: 25px 25px;
+    font-size: 14px;
+    margin: 5px;
+}
+.about-paragraph3{
+    background-color: rgba(12, 62, 71, 0.463);
+    box-shadow: 4px 2px 2px 2px rgb(29, 13, 153);
+    width: 500px;
+    height: 100px;
+    padding: 15px 25px;
+    font-size: 14px;
+    margin: 5px;
 }
 
 .about-paragraph:hover{
@@ -175,39 +209,26 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     position: absolute;
-    font-size: 5rem;
-    right: 11em;    
-    top: 6.5em;
+    font-size: 5px;
+    right: 11px;    
+    top: 6.5px;
 }
 
 .line{
-    width: 75rem;
+    width: 1200px;
     background-color: white;
     box-shadow: 0px 0px 1px 0.3px rgb(0, 254, 246);
-    height:0.1em;
+    height:1px;
     position: absolute;
-    bottom: 26em;
-    right: 0.1em;
+    bottom: 420px;
 }
 
 
 .boxforskills{
-    background-color: rgb(84, 9, 195);
-    background: linear-gradient(to bottom, rgb(133, 12, 199) 10%, rgb(58, 22, 185) 50%);
-    border-radius: 45px;
-    position: absolute;
-    left: 5rem;
-    top: 50rem;
-    width: 400px;
-    height: 70px;
+
 }
 .skillshead{
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 1000;
-    font-size: 4rem;
-    position: absolute;
-    top: 1.5rem;
+
 }
 .sbox1{
     width: 200px;
@@ -227,8 +248,9 @@ body {
     background: linear-gradient(to left, rgba(0, 0, 252, 0.992), rgb(16, 16, 145));
     border-radius: 2px;
     position: absolute;
-    bottom: 20em;
-    right: 40em;
+    bottom: 320px;
+    right: 950px;
+    display: none;
 }
 .sbox3{
     width: 200px;
@@ -237,9 +259,17 @@ body {
     background: linear-gradient(to left, yellow, rgb(163, 163, 0));
     border-radius: 2px;
     position: absolute;
-    bottom: 20em;
-    right: 20em;
+    bottom: 320px;
+    right: 940px;
+    display: none;
 }
+
+/*click effect*/
+
+#click-show.show .sbox2 .sbox3{
+    display: block;
+}
+
 ion-icon[name="logo-html5"]{
     width: 200px;
     height: 200px;
@@ -678,6 +708,14 @@ ion-icon[name="logo-javascript"]{
     display: block;
 }
 
+/*video*/
+
+.for-control{
+    width: 400px;
+    height: 400px;
+   
+}
+
 /*hover effects*/
 
 .sbox1:hover .list-of-container{
@@ -798,7 +836,7 @@ ion-icon[name="logo-javascript"]{
 }
 
 .sbox3:hover .js-percent{
-    width: 120px;
+    width: 50px;
     background: linear-gradient(to left, rgba(252, 235, 0, 0.992), rgb(221, 255, 4));
 }
 
